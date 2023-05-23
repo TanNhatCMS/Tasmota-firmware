@@ -160,12 +160,6 @@ jobs:
           git add -A
           git commit --allow-empty -m "$COMMIT"
           git push origin firmware -f
-      - name: Dispatch workflow in branch action-develo        # Needed until complete refactoring is done
-        run: |
-          curl -X POST https://api.github.com/repos/arendst/Tasmota-firmware/actions/workflows/copy_development_firmware.yml/dispatches \
-          -H 'Accept: application/vnd.github.everest-preview+json' \
-          -u ${{ secrets.API_TOKEN_GITHUB }} \
-          --data '{"ref": "action-development"}'
 
   deploy:
     needs: download
