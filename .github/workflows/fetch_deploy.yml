@@ -161,6 +161,18 @@ jobs:
           git commit --allow-empty -m "$COMMIT"
           git push origin firmware -f
 
+  start_workflow:
+    needs: download
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Dispatch workflow in repo Jason2866/Tasmota-build
+      run: |
+        curl -X POST https://api.github.com/repos/Jason2866/Tasmota-build/actions/workflows/Build_special_firmware.yml/dispatches \
+        -H 'Accept: application/vnd.github.everest-preview+json' \
+        -u ${{ secrets.MASTER_ACCESS_TOKEN }} \
+        --data '{"ref": "start_build"}'
+
   deploy:
     needs: download
     environment:
