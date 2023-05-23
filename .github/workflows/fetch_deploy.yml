@@ -170,7 +170,7 @@ jobs:
       run: |
         curl -X POST https://api.github.com/repos/Jason2866/Tasmota-build/actions/workflows/Build_special_firmware.yml/dispatches \
         -H 'Accept: application/vnd.github.everest-preview+json' \
-        -u ${{ secrets.MASTER_ACCESS_TOKEN }} \
+        -u ${{ secrets.API_TOKEN_GITHUB }} \
         --data '{"ref": "start_build"}'
 
   deploy:
