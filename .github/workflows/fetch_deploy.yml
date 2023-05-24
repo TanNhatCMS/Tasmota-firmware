@@ -4,7 +4,7 @@ on:
   repository_dispatch:
   workflow_dispatch:
   push:
-    branches: main
+    branches: gh_actions
 
 jobs:
   empty_branch:
