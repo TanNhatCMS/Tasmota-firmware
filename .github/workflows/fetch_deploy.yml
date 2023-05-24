@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: main
+          ref: gh_actions
       - name: Resets branch firmware to empty
         run: |
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -40,7 +40,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git remote add -f mrg_main "https://github.com/arendst/Tasmota-firmware.git" --track main
           git switch -c work
-          rm -rf ./github
+          #rm -rf ./github
           git merge mrg_main/main --allow-unrelated-histories &> status.txt
           echo "$(<status.txt)"
       - name: Push into branch firmware
