@@ -166,7 +166,6 @@ jobs:
     needs: download
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
     - name: Dispatch workflow in repo Jason2866/Tasmota-build
       run: |
         curl -X POST https://api.github.com/repos/Jason2866/Tasmota-build/actions/workflows/Build_special_firmware.yml/dispatches \
