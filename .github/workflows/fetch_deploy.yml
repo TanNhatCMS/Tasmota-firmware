@@ -140,6 +140,7 @@ jobs:
           [ ! -f ./gh_latest/tasmota32-lvgl.* ] || mv ./gh_latest/tasmota32-lvgl.* ./release-firmware/tasmota32/
           [ ! -f ./gh_latest/tasmota32-web*.* ] || mv ./gh_latest/tasmota32-web*.* ./release-firmware/tasmota32/
           [ ! -f ./gh_latest/tasmota32-zbbrdgpro.* ] || mv ./gh_latest/tasmota32-zbbrdgpro.* ./release-firmware/tasmota32/
+          [ ! -f ./gh_latest/tasmota32-matter.* ] || mv ./gh_latest/tasmota32-matter.* ./release-firmware/tasmota32/ 
           [ ! -f ./gh_latest/tasmota32-nspanel.* ] || mv ./gh_latest/tasmota32-nspanel.* ./release-firmware/tasmota32/
           [ ! -f ./gh_latest/tasmota32-odroidgo.* ] || mv ./gh_latest/tasmota32-odroidgo.* ./release-firmware/tasmota32/
           [ ! -f ./gh_latest/tasmota32-core2.* ] || mv ./gh_latest/tasmota32-core2.* ./release-firmware/tasmota32/
