@@ -10,7 +10,7 @@ jobs:
   empty_branch:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         ref: firmware
     - name: Create new empty firmware branch
@@ -32,7 +32,7 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: firmware
       - name: Merge branch main into branch firmware
@@ -49,11 +49,11 @@ jobs:
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           branch: 'firmware'
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: firmware
       - name: Download artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v3
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           workflow: Tasmota_build_devel.yml
@@ -187,15 +187,15 @@ jobs:
       id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: firmware
       - name: Setup Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v4
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
