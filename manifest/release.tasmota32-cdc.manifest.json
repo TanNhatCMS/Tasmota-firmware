@@ -5,24 +5,10 @@
   "new_install_improv_wait_time": 10,
   "builds": [
     {
-      "chipFamily": "ESP32-C3",
-      "improv": true,
-      "parts": [
-        { "path": "../release-firmware/tasmota32/tasmota32c3cdc.factory.bin", "offset": 0 }
-      ]
-    },
-    {
       "chipFamily": "ESP32-S2",
       "improv": true,
       "parts": [
         { "path": "../release-firmware/tasmota32/tasmota32s2cdc.factory.bin", "offset": 0 }
-      ]
-    },
-    {
-      "chipFamily": "ESP32-S3",
-      "improv": true,
-      "parts": [
-        { "path": "../release-firmware/tasmota32/tasmota32s3cdc.factory.bin", "offset": 0 }
       ]
     }
   ]
