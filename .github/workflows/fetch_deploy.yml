@@ -58,6 +58,8 @@ jobs:
           github_token: ${{secrets.GITHUB_TOKEN}}
           workflow: Tasmota_build_devel.yml
           repo: arendst/tasmota
+          name: tasmota*
+          name_is_regexp: true
           path: ./temp
       - name: Move firmware files in sub-folders
         run: |
