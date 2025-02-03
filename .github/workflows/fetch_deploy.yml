@@ -58,7 +58,7 @@ jobs:
           github_token: ${{secrets.GITHUB_TOKEN}}
           workflow: Tasmota_build_devel.yml
           repo: arendst/tasmota
-          name: firmware*
+          name: tasmota*
           name_is_regexp: true
       - name: Move artifacts in one folder
         run: |
