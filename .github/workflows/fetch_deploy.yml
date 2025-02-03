@@ -62,7 +62,7 @@ jobs:
       - name: Move firmware files in sub-folders
         run: |
           mkdir -p ./mv_firmware/firmware
-          cp -p .temp/**/*(.) ./mv_firmware/firmware
+          cp -p ./temp/**/*(.) ./mv_firmware/firmware
           mkdir -p ./firmware/tasmota/languages
           mkdir -p ./firmware/tasmota32/languages
           mkdir -p ./firmware/map
