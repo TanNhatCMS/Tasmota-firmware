@@ -63,11 +63,10 @@ jobs:
           path: ./temp
       - name: Move firmware files in sub-folders
         run: |
-          rm -rf ./temp/soli*
           mkdir -p ./mv_firmware/firmware
           find ./temp -type f -exec cp -t ./mv_firmware/firmware {} +
           rm -rf ./temp
-          rm -rf ./mv_firmware/firmware/soli*
+          find . -name '*.h' -delete
           mkdir -p ./firmware/tasmota/languages
           mkdir -p ./firmware/tasmota32/languages
           mkdir -p ./firmware/map
