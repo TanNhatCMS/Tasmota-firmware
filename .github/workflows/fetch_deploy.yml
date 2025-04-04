@@ -39,7 +39,7 @@ jobs:
         run: |
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
-          git remote add -f mrg_main "https://github.com/arendst/Tasmota-firmware.git" --track main
+          git remote add -f mrg_main "https://github.com/TanNhatCMS/Tasmota-firmware.git" --track main
           git switch -c work
           #rm -rf ./github
           git merge mrg_main/main --allow-unrelated-histories &> status.txt
@@ -107,8 +107,8 @@ jobs:
           python genManifest.py
       - name: Push updated devel content in branch firmware
         run: |
-          COMMIT_SHA=$(curl -s "https://api.github.com/repos/arendst/tasmota/commits/development" | jq -r '.sha')
-          COMMIT="Firmware built from commit https://github.com/arendst/Tasmota/commit/${COMMIT_SHA}"
+          COMMIT_SHA=$(curl -s "https://api.github.com/repos/TanNhatCMS/Tasmota-CoreIoT/commits/development" | jq -r '.sha')
+          COMMIT="Firmware built from commit https://github.com/TanNhatCMS/Tasmota-CoreIoT/commit/${COMMIT_SHA}"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
           git add -A
@@ -154,8 +154,8 @@ jobs:
           rm -rf ./gh_latest
       - name: Push updated master firmwares in branch firmware
         run: |
-          COMMIT_SHA=$(curl -s "https://api.github.com/repos/arendst/tasmota/commits/master" | jq -r '.sha')
-          COMMIT="Firmware built from commit https://github.com/arendst/Tasmota/commit/${COMMIT_SHA}"
+          COMMIT_SHA=$(curl -s "https://api.github.com/repos/TanNhatCMS/Tasmota-CoreIoT/commits/master" | jq -r '.sha')
+          COMMIT="Firmware built from commit https://github.com/TanNhatCMS/Tasmota-CoreIoT/commit/${COMMIT_SHA}"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
           git add -A
@@ -166,9 +166,9 @@ jobs:
     needs: download
     runs-on: ubuntu-latest
     steps:
-    - name: Dispatch workflow in repo Jason2866/Tasmota-build
+    - name: Dispatch workflow in repo TanNhatCMS/Tasmota-build
       run: |
-        curl -X POST https://api.github.com/repos/Jason2866/Tasmota-build/actions/workflows/Build_special_firmware.yml/dispatches \
+        curl -X POST https://api.github.com/repos/TanNhatCMS/Tasmota-build/actions/workflows/Build_special_firmware.yml/dispatches \
         -H 'Accept: application/vnd.github.everest-preview+json' \
         -u ${{ secrets.API_TOKEN_GITHUB }} \
         --data '{"ref": "start_build"}'
