@@ -8,48 +8,48 @@
       "chipFamily": "ESP32",
       "improv": true,
       "parts": [
-        { "path": "../release/tasmota32/tasmota32.factory.bin", "offset": 0 }
+        { "path": "../release-firmware/tasmota32/tasmota32.factory.bin", "offset": 0 }
       ]
     },
     {
       "chipFamily": "ESP32-C2",
       "improv": true,
       "parts": [
-        { "path": "../release/tasmota32/tasmota32c2.factory.bin", "offset": 0 }
+        { "path": "../release-firmware/tasmota32/tasmota32c2.factory.bin", "offset": 0 }
       ]
     },
     {
       "chipFamily": "ESP32-C3",
       "improv": true,
       "parts": [
-        { "path": "../release/tasmota32/tasmota32c3.factory.bin", "offset": 0 }
+        { "path": "../release-firmware/tasmota32/tasmota32c3.factory.bin", "offset": 0 }
       ]
     },
     {
       "chipFamily": "ESP32-C6",
       "improv": true,
       "parts": [
-        { "path": "../release/tasmota32/tasmota32c6.factory.bin", "offset": 0 }
+        { "path": "../release-firmware/tasmota32/tasmota32c6.factory.bin", "offset": 0 }
       ]
     },
     {
       "chipFamily": "ESP32-S2",
       "improv": true,
       "parts": [
-        { "path": "../release/tasmota32/tasmota32s2.factory.bin", "offset": 0 }
+        { "path": "../release-firmware/tasmota32/tasmota32s2.factory.bin", "offset": 0 }
       ]
     },
     {
       "chipFamily": "ESP32-S3",
       "improv": true,
       "parts": [
-        { "path": "../release/tasmota32/tasmota32s3.factory.bin", "offset": 0 }
+        { "path": "../release-firmware/tasmota32/tasmota32s3.factory.bin", "offset": 0 }
       ]
     },
     {
       "chipFamily": "ESP8266",
       "improv": true,
-      "parts": [{ "path": "../release/tasmota/tasmota-4M.bin", "offset": 0 }]
+      "parts": [{ "path": "../release-firmware/tasmota/tasmota-4M.bin", "offset": 0 }]
     }
   ]
 }
