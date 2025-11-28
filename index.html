@@ -64,6 +64,21 @@
 
         window.addEventListener("load", function(event) {
             makeSelector();
+            // Baud rate selection logic
+            const baudRateSelect = document.getElementById('baudRate');
+            const installButton = document.querySelector('esp-web-install-button');
+
+            if (baudRateSelect && installButton) {
+              baudRateSelect.addEventListener('change', function() {
+                const selectedRate = this.value;
+                if (selectedRate === '') {
+                  installButton.removeAttribute('baud-rate');
+                } else {
+                  installButton.setAttribute('baud-rate', selectedRate);
+                }
+              });
+            }
+
             try{
                 const button = document.querySelector("esp-web-install-button");
                 button.overrides = {
@@ -104,15 +119,21 @@
         </br>
       </br>
       <select id="pick-variant-selector"></select>
-      <p>
-        </br>
-        <esp-web-install-button id="inst" style='text-align:center'>
-          <i slot="unsupported">
-            Your browser does not support Web Serial.</br>Open this page in Google Chrome or</br>Microsoft Edge instead
-            <span class="not-supported-i hidden">(but not on your mobile device)</span>.
-          </i>
-        </esp-web-install-button>
-     </p>
+      <p></p>
+      <p>Flash Speed:</p>
+      <select id="baudRate">
+        <option value="">115200 Baud (Default)</option>
+        <option value="230400">230400 Baud</option>
+        <option value="460800">460800 Baud</option>
+        <option value="1500000">1500000 Baud</option>
+        <option value="2000000" selected>2000000 Baud (Recommended)</option>
+      </select>
+      <esp-web-install-button id="inst" style='text-align:center' baud-rate="115200">
+        <i slot="unsupported">
+          Your browser does not support Web Serial.</br>Open this page in Google Chrome or</br>Microsoft Edge instead
+          <span class="not-supported-i hidden">(but not on your mobile device)</span>.
+        </i>
+      </esp-web-install-button>
     </div>
     <div style='text-align:right;font-size:11px;'>
       <hr/>
