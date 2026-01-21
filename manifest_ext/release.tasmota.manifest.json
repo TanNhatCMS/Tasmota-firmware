@@ -10,7 +10,19 @@
             "parts": [
                 {
                     "path": "https://arendst.github.io/Tasmota-firmware/release-firmware/tasmota32/tasmota32.factory.bin",
-                    "offset": 0
+                    "offset": 0,
+                    "size": 2136480
+                }
+            ]
+        },
+        {
+            "chipFamily": "ESP32-C2",
+            "improv": true,
+            "parts": [
+                {
+                    "path": "https://arendst.github.io/Tasmota-firmware/release-firmware/tasmota32/tasmota32c2.factory.bin",
+                    "offset": 0,
+                    "size": 2018304
                 }
             ]
         },
@@ -20,7 +32,41 @@
             "parts": [
                 {
                     "path": "https://arendst.github.io/Tasmota-firmware/release-firmware/tasmota32/tasmota32c3.factory.bin",
-                    "offset": 0
+                    "offset": 0,
+                    "size": 2158752
+                }
+            ]
+        },
+        {
+            "chipFamily": "ESP32-C5",
+            "improv": true,
+            "parts": [
+                {
+                    "path": "https://arendst.github.io/Tasmota-firmware/release-firmware/tasmota32/tasmota32c5.factory.bin",
+                    "offset": 0,
+                    "size": 2270704
+                }
+            ]
+        },
+        {
+            "chipFamily": "ESP32-C6",
+            "improv": true,
+            "parts": [
+                {
+                    "path": "https://arendst.github.io/Tasmota-firmware/release-firmware/tasmota32/tasmota32c6.factory.bin",
+                    "offset": 0,
+                    "size": 2211040
+                }
+            ]
+        },
+        {
+            "chipFamily": "ESP32-P4",
+            "improv": true,
+            "parts": [
+                {
+                    "path": "https://arendst.github.io/Tasmota-firmware/release-firmware/tasmota32/tasmota32p4.factory.bin",
+                    "offset": 0,
+                    "size": 2130944
                 }
             ]
         },
@@ -30,7 +76,8 @@
             "parts": [
                 {
                     "path": "https://arendst.github.io/Tasmota-firmware/release-firmware/tasmota32/tasmota32s2.factory.bin",
-                    "offset": 0
+                    "offset": 0,
+                    "size": 2035936
                 }
             ]
         },
@@ -40,7 +87,8 @@
             "parts": [
                 {
                     "path": "https://arendst.github.io/Tasmota-firmware/release-firmware/tasmota32/tasmota32s3.factory.bin",
-                    "offset": 0
+                    "offset": 0,
+                    "size": 2077296
                 }
             ]
         },
@@ -50,7 +98,8 @@
             "parts": [
                 {
                     "path": "https://arendst.github.io/Tasmota-firmware/release-firmware/tasmota/tasmota.bin",
-                    "offset": 0
+                    "offset": 0,
+                    "size": 672176
                 }
             ]
         }
