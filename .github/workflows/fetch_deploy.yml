@@ -39,7 +39,7 @@ jobs:
         run: |
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
-          git remote add -f mrg_main "https://github.com/arendst/Tasmota-firmware.git" --track main
+          git remote add -f mrg_main "https://github.com/TanNhatCMS/Tasmota-firmware.git" --track main
           git switch -c work
           #rm -rf ./github
           git merge mrg_main/main --allow-unrelated-histories &> status.txt
@@ -56,8 +56,8 @@ jobs:
         uses: dawidd6/action-download-artifact@v3
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
-          workflow: Tasmota_build_devel.yml
-          repo: arendst/tasmota
+          workflow: Tasmota_build_main.yml
+          repo: TanNhatCMS/tasmota
           name: ^((?!berry).)*$
           name_is_regexp: true
           path: ./temp
@@ -104,8 +104,8 @@ jobs:
           rm -rf ./mv_firmware
       - name: Push updated devel content in branch firmware
         run: |
-          COMMIT_SHA=$(gh api repos/arendst/tasmota/commits/development --jq '.sha')
-          COMMIT="Firmware built from commit https://github.com/arendst/Tasmota/commit/${COMMIT_SHA}"
+          COMMIT_SHA=$(gh api repos/TanNhatCMS/tasmota/commits/main --jq '.sha')
+          COMMIT="Firmware built from commit https://github.com/TanNhatCMS/Tasmota/commit/${COMMIT_SHA}"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
           git add -A
@@ -113,7 +113,7 @@ jobs:
           git push origin firmware -f
       - name: Download release firmwares from latest release in github
         run: |
-          gh release download -p "tasmota*" -D gh_latest -R github.com/arendst/tasmota
+          gh release download -p "tasmota*" -D gh_latest -R github.com/TanNhatCMS/tasmota
       - name: Move firmware files in sub-folders
         run: |
           mkdir -p ./release-firmware/tasmota/languages
